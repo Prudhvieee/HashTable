@@ -29,6 +29,8 @@ namespace HashTable
                 key++;
             }
             Console.WriteLine("\nFrequency :" + hash1.GetFrequency("paranoid"));
+            hash1.RemoveValue("avoidable");
+            Console.WriteLine("Frequency :" + hash.GetFrequency("avoidable"));
         }
     }
 }
