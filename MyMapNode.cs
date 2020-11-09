@@ -107,5 +107,28 @@ namespace HashTable
                 linkedlist.Remove(foundItem);
             }
         }
+        /// <summary>
+        ///Gives the count the of word provided.
+        /// </summary>
+        public int GetFrequency(V value)
+        {
+            int frequency = 0;
+            ///Iterating to get the key value of each item.
+            foreach (LinkedList<keyValue<K, V>> list in items)
+            {
+                ///Checking if key is not null 
+                if (list == null)
+                    continue;
+                ///Iterating to get the value of the item in linked list.
+                foreach (keyValue<K, V> obj in list)
+                {
+                    if (obj.Equals(null))
+                        continue;
+                    if (obj.value.Equals(value))
+                        frequency++;
+                }
+            }
+            return frequency;
+        }
     }
 }
